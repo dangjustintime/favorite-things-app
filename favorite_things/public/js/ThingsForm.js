@@ -1,5 +1,5 @@
 // Title, Image, Category, Description, Owner
-class ThingForm extends React.Component {
+class ThingsForm extends React.Component {
   render () {
     return (
       <div className='field'>
@@ -25,7 +25,7 @@ class ThingForm extends React.Component {
           </div>
 
           <div className='control'>
-            <input className='button is-primary' type='submit' />
+            <input className='button-submit' type='submit' />
           </div>
         </form>
         <button className="button is-link">Nevermind</button>
