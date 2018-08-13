@@ -1,14 +1,7 @@
 class Thing
-    # ==================================================
-    #                      SET UP
-    # ==================================================
-
-    # add attribute readers for instance access
     attr_reader :id, :title, :image, :category, :description
 
-    # connect to postgres
-    # Database name blank for setup
-    DB = PG.connect(host: "localhost", port: 5432, dbname: '')
+    DB = PG.connect(host: "localhost", port: 5432, dbname: 'favorite_things_development')
 
     # initialize options hash
     def initialize(opts = {})
@@ -17,15 +10,10 @@ class Thing
         @image = opts["image"]
         @category= opts["category"]
         @description = opts["description"]
-        #if company is in opts hash, show it
         if opts["user"]
           @user = opts["user"]
         end
     end
-
-    # ==================================================
-    #                      ROUTES
-    # ==================================================
 
     # get all
     def self.all
@@ -35,7 +23,7 @@ class Thing
                   things.*,
                   users.username
               FROM things
-              LEFT JOIN companies
+              LEFT JOIN users
                   ON things.user_id = users.id
           SQL
       )
@@ -133,7 +121,7 @@ class Thing
                image=#{opts["image"]},
                category='#{opts["category"]}',
                description='#{opts["description"]}',
-               company_id=#{opts["user_id"] ? opts["user_id"] : "NULL"}
+               user_id=#{opts["user_id"] ? opts["user_id"] : "NULL"}
               WHERE id=#{id}
               RETURNING id, title, image, category, description, user_id;
           SQL
@@ -141,7 +129,7 @@ class Thing
       return Thing.new(results.first)
     end
 
-    # update company person belongs to
+    # update things
     def self.setUser(thing_id, user)
     results = DB.exec(
         <<-SQL
