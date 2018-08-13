@@ -13,6 +13,6 @@ class UsersController < ApplicationController
         render json: User.delete(params["id"])
     end
     def update
-        render json: User.create(params["id"], params["user"])
+        render json: User.update(params["id"], params["user"])
     end
 end
