@@ -13,6 +13,6 @@ class ThingsController < ApplicationController
         render json: Thing.delete(params["id"])
     end
     def update
-        render json: Thing.create(params["id"], params["thing"])
+        render json: Thing.update(params["id"], params["thing"])
     end
 end
