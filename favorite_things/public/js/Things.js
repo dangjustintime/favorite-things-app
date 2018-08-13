@@ -1,7 +1,7 @@
 class Things extends React.Component {
     render () {
       return (
-        <div className='things column'>
+        <div className='things-column'>
           <h2> Things </h2>
           <button className='button is-success'>Add an Item</button>
           <table>

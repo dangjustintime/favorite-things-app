@@ -6,42 +6,66 @@ darkpurple : #6e0099;
 
 
 */
-body {
-  background-image: url(img/Black-Wood.jpg);
-  /* background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Dark-Black-Wood-Background-Wallpaper.jpg"); */
+html,body {
   /* margin-top: 120px; */
-  /* background-image: url(img/Dark-Wallpaper.jpg); */
+  background-image: url(img/Black-Wood.jpg);
+  background-repeat:repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: #6699f6;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
 }
+
 .label {
   color: #c32aff;
+}
+.field {
+    display: inline-block;
+    text-align: center;
 }
 
 input[type=text] {
   border: 2px solid #110141;
   color: #110141;
   background-color: #6699f6;
+  width: 300px;
+  display: block;
+  text-align: center;
 }
-header {
 
+.columns {
+  display: flex;
+  width: 10px;
 }
 
-footer {
+div.things-column {
+  display: inline-block;
+  text-align: center;
+}
 
 div {
   display: block;
 }
 
 }
-.title {
-  display: block;
+
+h1.title {
   color: #6699f6;
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
+  background-color: white;
 }
 
-h1, h2, h3 {
+h2, h3, h1 {
   color: #6699f6;
   text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  padding: 3px;
+  margin: 3px;
+
 }
 
 img {
@@ -61,6 +85,15 @@ img {
 
 }
 
-buttons {
+button {
   margin: 3px;
+}
+
+td {
+  margin: 4px;
+  padding: 3px;
+}
+
+input#title.input {
+  background-color: #f1ccff;
 }
