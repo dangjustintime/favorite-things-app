@@ -78,7 +78,7 @@ class Thing
         Thing.new(
             {
                 "id" => result["id"],
-                "title" => result["name"],
+                "title" => result["title"],
                 "image" => result["image"],
                 "user" => user,
                 "category" => result["category"],
@@ -89,7 +89,7 @@ class Thing
     end
 
     # create one
-    def self.create(opts={})
+    def self.create(opts)
       results = DB.exec(
           <<-SQL
               INSERT INTO things (title, image, category, description, user_id)
@@ -112,7 +112,7 @@ class Thing
     end
 
     # update one (by id)
-    def self.update(id, opts={})
+    def self.update(id, opts)
       results = DB.exec(
           <<-SQL
               UPDATE things
