@@ -76,7 +76,7 @@ class Things extends React.Component {
             toggleState={this.toggleState}
             /> : ''}
 
-          {this.state.addIsVisible
+          {this.state.ThingVisible
             ? <Thing
             toggleState={this.toggleState}
             thing={this.state.thing}
