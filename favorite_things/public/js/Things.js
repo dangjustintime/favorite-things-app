@@ -12,6 +12,7 @@ class Things extends React.Component {
     this.toggleState = this.toggleState.bind(this)
     this.getThings = this.getThings.bind(this)
     this.getThing = this.getThing.bind(this)
+    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
     this.deleteThing = this.deleteThing.bind(this)
   }
   componentDidMount() {
@@ -33,6 +34,25 @@ class Things extends React.Component {
   })
   }
 
+  handleUpdateSubmit (thing) {
+    fetch('/things/' + thing.id, {
+      body: JSON.stringify(thing),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(updatedThing => {
+        return updatedThing.json();
+      })
+      .then(jsonedThing => {
+        this.getThings();
+        this.toggleState('listIsVisible', 'ThingVisible');
+      })
+      .catch(error => console.log(error));
+  }
+  
   getThings(){
     fetch('/things')
       .then(response => response.json())
@@ -80,6 +100,7 @@ class Things extends React.Component {
             ? <Thing
             toggleState={this.toggleState}
             thing={this.state.thing}
+            handleSubmit={this.handleUpdateSubmit}
             /> : ''}
 
       </div>
