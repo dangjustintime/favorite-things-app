@@ -83,7 +83,16 @@ img {
   border: none;
   margin: 3px;
   font-size: 18px;
-
+}
+.button-fulllist {
+  background-color: #01545a;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
+  font-size: 18px;
 }
 
 button {

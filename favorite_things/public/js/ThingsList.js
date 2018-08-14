@@ -8,21 +8,21 @@ class ThingsList extends React.Component {
           <tr>
           <td onClick={
             () => {
-              this.props.toggleState('thingsListIsVisible', 'thingIsVisible'); this.props.getThing(thing)
+              this.props.toggle('listIsVisible', 'ThingVisible'); this.props.getThing(thing)
             }}
           >
-            <img src={thing.image} alt={thing.name} />
+            <img src={thing.image} alt={thing.title} />
           </td>
           <td onClick={
             () => {
-              this.props.toggleState('thingsListIsVisible', 'thingIsVisible'); this.props.getThing(thing)
+              this.props.toggle('listIsVisible', 'ThingVisible'); this.props.getThing(thing)
             }}
           >
-            <h3> {thing.name} </h3>
+            <h3> {thing.title} </h3>
           </td>
           <td onClick={
             () => {
-              this.props.toggleState('thingsListIsVisible', 'thingIsVisible'); this.props.getThing(thing)
+              this.props.toggle('listIsVisible', 'ThingVisible'); this.props.getThing(thing)
             }}
           >
               <button className='button is-warning is-small'>Edit</button>
