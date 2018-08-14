@@ -40,7 +40,7 @@ class Things extends React.Component {
         this.setState({
           things: JSONdata
         })
-      }).catch(error=>console.log(error))
+      }).catch(error => console.log(error))
   }
 
   getThing( thing ){

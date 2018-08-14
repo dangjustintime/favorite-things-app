@@ -66,12 +66,38 @@ div.field{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 h1.title {
-  color: #6699f6;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  /* font: normal 48px/normal "Warnes", Helvetica, sans-serif; */
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
   padding-bottom: 15px;
+  font-size: 48px;
+}
+
+h1.title:hover {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+}
+}
+h1.title {
+  color: #6699f6;
+
 }
 
 h2, h3 {
@@ -164,6 +190,3 @@ div.control {
   padding-top: 10px;
   padding-bottom: 5px;
 }
-/* label.label {
-  padding-top: 5px;
-} */
