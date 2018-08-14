@@ -44,6 +44,10 @@ class Things extends React.Component {
   }
 
   getThing(thing){
+    this.setState({thing:thing})
+  }
+
+  toggleState(st1,st2){
     this.setState({
       [st1]: !this.state[st1],
       [st2]: !this.state[st2]
