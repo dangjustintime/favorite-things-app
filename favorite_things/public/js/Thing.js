@@ -35,7 +35,7 @@ class Thing extends React.Component {
           </div>
           </div>
         </div>
-        <ThingsForm />
+        <ThingsForm thing={this.props.thing} handleSubmit={this.props.handleSubmit}/>
       </div>
     )
   }
