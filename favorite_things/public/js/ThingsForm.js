@@ -1,4 +1,3 @@
-// Title, Image, Category, Description, Owner
 class ThingsForm extends React.Component {
   render () {
     return (

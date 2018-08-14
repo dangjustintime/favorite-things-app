@@ -1,4 +1,3 @@
-// Title, Image, Category, Description, Owner
 class Thing extends React.Component {
   render () {
     return (
@@ -17,8 +16,8 @@ class Thing extends React.Component {
               <h3 className='tile is-child box'><span>Title:</span>
                   {this.props.thing.title} </h3>
 
-              <h3 className='tile is-child box'><span>Category:</span>
-                  {this.props.thing.category} </h3>
+              <p className='tile is-child box'><span>Category:</span>
+                  {this.props.thing.category} </p>
 
               <p className='tile is-child box'><span>Description:</span>
                   {this.props.thing.description}</p>
@@ -36,7 +35,7 @@ class Thing extends React.Component {
           </div>
           </div>
         </div>
-        <ThingForm />
+        <ThingsForm />
       </div>
     )
   }
