@@ -40,7 +40,7 @@ class Things extends React.Component {
         this.setState({
           things: JSONdata
         })
-      }).catch(error=>console.log(error))
+      }).catch(error => console.log(error))
   }
 
   getThing( thing ){
@@ -59,7 +59,7 @@ class Things extends React.Component {
         <div className='things-column'>
           <h2> Things </h2>
           <button
-            className='button is-success'
+            className='button-add-item'
             onClick={() => this.toggleState('addIsVisible' , 'listIsVisible')}
             >Add a Thing</button>
 

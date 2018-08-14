@@ -67,7 +67,7 @@ class Thing
         )
         result = results.first
         if result["user_id"]
-            user = 
+            user =
                 {
                     "id" => result["user_id"],
                     "username" => result["username"],

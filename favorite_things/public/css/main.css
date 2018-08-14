@@ -1,10 +1,16 @@
 /*
+lghtneonblu: #b6cefb;
 neonblue   : #6699f6;
 darkblue   : #083891;
 neonpurple : #c32aff;
 darkpurple : #6e0099;
+greypurple : #a27ca1;
+drkgrypurpl: #5a3f59;
+neongreen  : #00ff00;
+lightngrn  : #e6ffe6;
+randomgrn  : #078e91;
 
-
+http://spacenode.com/dc_includes/fbimg.php?url=http%3A%2F%2F1-background.com%2Fimages%2Fbrick%2Fglass-brick-wall-purple.jpg
 */
 html,body {
   /* margin-top: 120px; */
@@ -22,42 +28,76 @@ html,body {
 .label {
   color: #c32aff;
 }
-.field {
+/* .field {
     display: inline-block;
     text-align: center;
-}
+} */
 
 input[type=text] {
   border: 2px solid #110141;
   color: #110141;
-  background-color: #6699f6;
-  width: 300px;
+  background-color: #b6cefb;
+  width: 400px;
   display: block;
   text-align: center;
 }
-
-.columns {
+div.container {
   display: flex;
-  width: 10px;
+  justify-content: center;
+  align-items: center;
 }
-div.section {
-  display: block;
+
+label.label {
+  font-size: 23px;
+  margin-top: 3px;
+  padding-top: 6px;
 }
 
 div.things-column {
-  display: block;
-  text-align: center;
-
+  border: solid #6e0099;
+  background-image: url("https://thumb9.shutterstock.com/mosaic_250/190878796/1076493476/stock-photo-brick-wall-background-neon-light-1076493476.jpg");
+  border-radius: 4px;
+  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 500px;
 }
-
-div {
-  display: block;
+div.field{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
 h1.title {
-  color: #6699f6;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  /* font: normal 48px/normal "Warnes", Helvetica, sans-serif; */
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
+  padding-bottom: 15px;
+  font-size: 48px;
+}
+
+h1.title:hover {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+}
+}
+h1.title {
+  color: #6699f6;
+
 }
 
 h2, h3 {
@@ -65,8 +105,9 @@ h2, h3 {
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
   padding: 3px;
-  margin: 3px;
+  /* margin: 3px; */
   font-size: 25px;
+  padding-bottom: 15px;
 }
 
 img {
@@ -74,6 +115,11 @@ img {
   width: auto;
 }
 /*Buttons*/
+div.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .button-submit {
   background-color: #c32aff;
   color: white;
@@ -83,6 +129,8 @@ img {
   border: none;
   margin: 3px;
   font-size: 18px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
 }
 .button-fulllist {
   background-color: #01545a;
@@ -93,15 +141,42 @@ img {
   border: none;
   margin: 3px;
   font-size: 18px;
+  font-family: 'Shadows Into Light', cursive;
+}
+.button-add-item {
+  background-color: #6666ff;
+  color: #e6ffe6;
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+.button-nevermind {
+  background-color: #3333ff;
+  color: #e6ffe6;
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .button-fulllist:hover {
   border: 1px solid white;
 }
 .button-submit:hover {
-  border: 1px solid white;  
+  border: 1px solid white;
 }
-
+.button-add-item:hover {
+  border: 1px solid white;
+}
 button {
   margin: 3px;
 }
@@ -111,6 +186,7 @@ td {
   padding: 3px;
 }
 
-input#title.input {
-  background-color: #f1ccff;
+div.control {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
