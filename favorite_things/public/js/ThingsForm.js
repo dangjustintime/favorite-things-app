@@ -1,4 +1,3 @@
-// Title, Image, Category, Description, Owner
 class ThingsForm extends React.Component {
   render () {
     return (
@@ -28,7 +27,7 @@ class ThingsForm extends React.Component {
             <input className='button-submit' type='submit' />
           </div>
         </form>
-        <button className="button is-link">Nevermind</button>
+        <button className="button-nevermind" onClick={() => this.props.toggleState('addIsVisible','listIsVisible')}>Nevermind</button>
       </div>
     )
   }
