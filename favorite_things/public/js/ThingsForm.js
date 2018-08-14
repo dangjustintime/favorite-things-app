@@ -28,7 +28,7 @@ class ThingsForm extends React.Component {
             <input className='button-submit' type='submit' />
           </div>
         </form>
-        <button className="button is-link" onClick={() => this.props.toggle('addIsVisible','listIsVisible')}>Nevermind</button>
+        <button className="button is-link" onClick={() => this.props.toggleState('addIsVisible','listIsVisible')}>Nevermind</button>
       </div>
     )
   }

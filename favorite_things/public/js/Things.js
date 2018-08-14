@@ -1,6 +1,7 @@
 class Things extends React.Component {
   constructor(props){
-    this.state ={
+    super(props)
+    this.state = {
       listIsVisible: true,
       addIsVisible: false,
       ThingVisible: false,
@@ -8,7 +9,7 @@ class Things extends React.Component {
       things: [],
       thing: {}
     }
-    this.toggle = this.toggle.bind(this)
+    this.toggleState = this.toggleState.bind(this)
     this.getThings = this.getThings.bind(this)
     this.getThing = this.getThing.bind(this)
     this.deleteThing = this.deleteThing.bind(this)
@@ -54,12 +55,12 @@ class Things extends React.Component {
         <div className='things-column'>
           <h2> Things </h2>
           <button className='button is-success' onClick={() =>
-          this.toggle('addIsVisible' , 'listIsVisible')}
+          this.toggleState('addIsVisible' , 'listIsVisible')}
             >Add a Thing</button>
 
           {this.state.listIsVisible
             ? <ThingsList
-            toggle={this.toggle}
+            toggleState={this.toggleState}
             things={this.state.things}
             getThing={this.getThing}
             deleteThing={this.deleteThing}
@@ -67,12 +68,12 @@ class Things extends React.Component {
 
           {this.state.addIsVisible
             ? <ThingsForm
-            toggle={this.toggle}
+            toggleState={this.toggleState}
             /> : ''}
 
           {this.state.addIsVisible
             ? <Thing
-            toggle={this.toggle}
+            toggleState={this.toggleState}
             thing={this.state.thing}
             /> : ''}
 

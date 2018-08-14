@@ -31,7 +31,7 @@ class Thing extends React.Component {
           <div className='tile'>
             <button className='button-fulllist'
               onClick={() =>
-              this.props.toggle('listIsVisible', 'ThingVisible')}
+              this.props.toggleState('listIsVisible', 'ThingVisible')}
             >See Allllll The Things!</button>
           </div>
           </div>
