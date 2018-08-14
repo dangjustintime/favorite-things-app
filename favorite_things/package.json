@@ -1,5 +1,7 @@
 {
   "name": "favorite_things",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "ruby": "^0.6.1"
+  }
 }
