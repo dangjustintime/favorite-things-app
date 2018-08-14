@@ -54,6 +54,7 @@ class ThingsForm extends React.Component {
               onChange={this.handleChange}
               value={this.state.category}
             />
+
           </div>
 
           <label className='label' for='description'>Description</label>

@@ -13,16 +13,16 @@ class Thing extends React.Component {
           <div className='tile is-2'></div>
           <div className='tile'>
             <div>
-              <h3 className='tile is-child box'><span>Title:</span>
+              <h3 className='tile is-child box'><span>Title: </span>
                   {this.props.thing.title} </h3>
 
-              <p className='tile is-child box'><span>Category:</span>
+              <p className='tile is-child box'><span>Category: </span>
                   {this.props.thing.category} </p>
 
-              <p className='tile is-child box'><span>Description:</span>
+              <p className='tile is-child box'><span>Description: </span>
                   {this.props.thing.description}</p>
 
-              <p className='tile is-child box'><span>Owner:</span>
+              <p className='tile is-child box'><span>Owner: </span>
                   {this.props.thing.owner}</p>
             </div>
             <div className='tile'>

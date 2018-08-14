@@ -71,8 +71,11 @@ div.things-column {
   padding: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 500px;
+  width: 650px;
 }
+/* div.tile.is-2 {
+  width: 200px;
+} */
 table {
   padding-top: 22px;
   display: flex;
@@ -129,8 +132,11 @@ h2, h3 {
 }
 
 img {
-  height: 100px;
+  height: 150px;
   width: auto;
+}
+img:hover {
+  transform: scale(1.5);
 }
 /*Buttons*/
 div.control {
