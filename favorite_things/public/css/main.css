@@ -9,7 +9,7 @@ drkgrypurpl: #5a3f59;
 neongreen  : #00ff00;
 lightngrn  : #e6ffe6;
 randomgrn  : #078e91;
-
+yellow     : #ffffcc;
 http://spacenode.com/dc_includes/fbimg.php?url=http%3A%2F%2F1-background.com%2Fimages%2Fbrick%2Fglass-brick-wall-purple.jpg
 */
 html,body {
@@ -41,6 +41,15 @@ input[type=text] {
   display: block;
   text-align: center;
 }
+
+div {
+  padding-top: 30px;
+}
+
+h3.tile.is-child.box, p.tile.is-child.box {
+  background-color: #6600cc;
+  color: #b6cefb;
+}
 div.container {
   display: flex;
   justify-content: center;
@@ -52,7 +61,9 @@ label.label {
   margin-top: 3px;
   padding-top: 6px;
 }
-
+p {
+  font-size: 25px;
+}
 div.things-column {
   border: solid #6e0099;
   background-image: url("https://thumb9.shutterstock.com/mosaic_250/190878796/1076493476/stock-photo-brick-wall-background-neon-light-1076493476.jpg");
@@ -62,6 +73,13 @@ div.things-column {
   padding-right: 20px;
   width: 500px;
 }
+table {
+  padding-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 div.field{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -166,6 +184,21 @@ div.control {
   font-size: 18px;
   text-align: center;
   font-family: 'Shadows Into Light', cursive;
+}
+.button-edit {
+  background-color: #ffffcc;
+  color: #e6ffe6;
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+.button-delete {
+
 }
 
 .button-fulllist:hover {
