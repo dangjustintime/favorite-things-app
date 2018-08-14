@@ -6,24 +6,33 @@ class Thing extends React.Component {
         <div className='tile is-ancestor'>
           <div className='tile is-2'>
             <div>
-              <img src="https://alternativemovieposters.com/wp-content/uploads/2017/05/lovell_aliens.jpg" alt="Aliens" />
+              <img src={this.props.thing.image}
+               alt={this.props.thing.title} />
             </div>
           </div>
+
           <div className='tile is-2'></div>
           <div className='tile'>
             <div>
-              <h3 className='tile is-child box'><span>Title:</span> Aliens </h3>
+              <h3 className='tile is-child box'><span>Title:</span>
+                  {this.props.thing.title} </h3>
 
-              <p className='tile is-child box'><span>Category:</span> Movies </p>
+              <h3 className='tile is-child box'><span>Category:</span>
+                  {this.props.thing.category} </h3>
 
-              <p className='tile is-child box'><span>Description:</span> Ripley don mussed up again broh. Back to fight more aliens and stuff in this one broh.</p>
+              <p className='tile is-child box'><span>Description:</span>
+                  {this.props.thing.description}</p>
 
-              <p className='tile is-child box'><span>Owner:</span> Newt </p>
+              <p className='tile is-child box'><span>Owner:</span>
+                  {this.props.thing.owner}</p>
             </div>
             <div className='tile'>
             </div>
           <div className='tile'>
-            <button className='button is-fulllist'>See Full List</button>
+            <button className='button-fulllist'
+              onClick={() =>
+              this.props.toggle('listIsVisible', 'ThingVisible')}
+            >See Allllll The Things!</button>
           </div>
           </div>
         </div>
