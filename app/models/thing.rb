@@ -1,7 +1,7 @@
 class Thing
     attr_reader :id, :title, :image, :category, :description
-    if(ENV['DATABASE_URL'])
-        uri = URI.parse(ENV['DATABASE_URL'])
+    if(ENV['https://data.heroku.com/datastores/9bdad6ec-17d9-4c13-bf41-166b2337793e#'])
+        uri = URI.parse(ENV['https://data.heroku.com/datastores/9bdad6ec-17d9-4c13-bf41-166b2337793e#'])
         DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
     else
         DB = PG.connect(host: "localhost", port: 5432, dbname: 'favorite_things_development')
