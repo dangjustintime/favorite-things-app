@@ -14,9 +14,35 @@ class Things extends React.Component {
     this.getThing = this.getThing.bind(this)
     this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
     this.deleteThing = this.deleteThing.bind(this)
+    this.handleCreate = this.handleCreate.bind(this)
+    this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
   }
   componentDidMount() {
     this.getThings()
+  }
+
+  handleCreate (thing) {
+    console.log([thing, ...this.state.things])
+    this.setState({things: [thing, ...this.state.things]})
+  }
+
+  handleCreateSubmit (thing) {
+    fetch('/things', {
+      body: JSON.stringify(thing),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(createdThing => {
+      return createdThing.json()
+    })
+    .then(jsonedThing => {
+      this.handleCreate(jsonedThing)
+      this.toggleState('addIsVisible', 'listIsVisible')
+    })
+    .catch(error => console.log(error))
   }
 
   deleteThing(thing,index){
@@ -52,7 +78,7 @@ class Things extends React.Component {
       })
       .catch(error => console.log(error));
   }
-  
+
   getThings(){
     fetch('/things')
       .then(response => response.json())
@@ -94,6 +120,8 @@ class Things extends React.Component {
           {this.state.addIsVisible
             ? <ThingsForm
             toggleState={this.toggleState}
+            handleCreate={this.handleCreate}
+            handleSubmit={this.handleCreateSubmit}
             /> : ''}
 
           {this.state.ThingVisible

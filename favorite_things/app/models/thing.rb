@@ -147,5 +147,4 @@ class Thing
     )
     return Thing.new(results.first)
   end
-
 end
