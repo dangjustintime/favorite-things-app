@@ -9,16 +9,17 @@ class Things extends React.Component {
       things: [],
       thing: {}
     }
-    this.toggleState = this.toggleState.bind(this)
-    this.getThings = this.getThings.bind(this)
-    this.getThing = this.getThing.bind(this)
-    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
     this.deleteThing = this.deleteThing.bind(this)
     this.handleCreate = this.handleCreate.bind(this)
     this.handleCreateSubmit = this.handleCreateSubmit.bind(this)
+    this.getThings = this.getThings.bind(this)
+    this.getThing = this.getThing.bind(this)
+    this.toggleState = this.toggleState.bind(this)
+    this.handleUpdateSubmit = this.handleUpdateSubmit.bind(this)
   }
+
   componentDidMount() {
-    this.getThings()
+    this.getThings();
   }
 
   handleCreate (thing) {
@@ -52,7 +53,7 @@ class Things extends React.Component {
   })
   .then(data => {
     this.setState({
-      people: [
+      things: [
         ...this.state.things.slice(0,index),
         ...this.state.things.slice(index + 1)
       ]

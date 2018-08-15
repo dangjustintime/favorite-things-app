@@ -31,7 +31,7 @@ class Thing
       return results.map do |result|
             if result["user_id"]
                 user = {
-                    "id" => result["user_id"],
+                  "id" => result["user_id"].to_i,
                     "username" => result["username"],
                     "password" => result["password"]
                 }
@@ -40,7 +40,7 @@ class Thing
             end
             Thing.new(
                 {
-                    "id" => result["id"],
+                    "id" => result["id"].to_i,
                     "title" => result["title"],
                     "image" => result["image"],
                     "user" => user,
@@ -69,7 +69,7 @@ class Thing
         if result["user_id"]
             user =
                 {
-                    "id" => result["user_id"],
+                  "id" => result["user_id"].to_i,
                     "username" => result["username"],
                     "password" => result["password"]
                 }
@@ -100,7 +100,7 @@ class Thing
               RETURNING id, title, image, category, description, user_id;
           SQL
       )
-      # return Thing.new(results.first)
+      return Thing.new(results.first)
     end
 
     # delete one (by id)

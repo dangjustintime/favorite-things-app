@@ -35,7 +35,11 @@ class Thing extends React.Component {
           </div>
           </div>
         </div>
-        <ThingsForm thing={this.props.thing} handleSubmit={this.props.handleSubmit}/>
+        <ThingsForm
+          thing={this.props.thing}
+          handleSubmit={this.props.handleSubmit}
+          toggleState={this.props.toggleState}
+      />
       </div>
     )
   }
